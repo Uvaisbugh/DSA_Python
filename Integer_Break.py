@@ -47,3 +47,26 @@ class Solution(object):
         return dp[n]
 # Time: O(n^2)
 # Space: O(n)
+
+
+# Method 3 ------ Mathematics -------
+'''
+From the hint:
+7 = 3 + 4 = 12
+8 = 3 + 3 + 2 = 18
+9 = 3 + 3 + 3 = 27
+10 = 3 + 3 + 4 = 36
+11 = 3 + 3 + 3 + 2 = 54
+12 = 3 + 3 + 3 + 3 = 81
+Three is a magic number.
+'''
+class Solution(object):
+    def integerBreak(self, n):
+        if n == 2 or n == 3:
+            return n - 1
+        if n % 3 == 0:
+            return 3**(n/3)
+        if n % 3 == 1:
+            return 3**(n/3 - 1)*4
+        if n % 3 == 2:
+            return 3**(n/3)*2

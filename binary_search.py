@@ -28,3 +28,10 @@ def binary_search(array: list, target: int) -> bool:
     else:
         return True
 
+
+if __name__ == "__main__":
+    for item in test_data:
+        print(
+            f"binary_search({item.array}, {item.target}) is "
+            f"{binary_search(item.array, item.target)}"
+        )

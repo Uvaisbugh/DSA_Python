@@ -8,3 +8,23 @@ test_data = (
     TestData([], -2, False),
 )
 
+
+def binary_search(array: list, target: int) -> bool:
+    """
+    Search a sorted list to find a target integer
+
+    >>> all(binary_search(x.array, x.target) == x.expected for x in test_data)
+    True
+    """
+    if len(array) < 1:
+        return False
+    if len(array) == 1:
+        return array[0] == target
+    mid = len(array) // 2
+    if array[mid] < target:
+        return binary_search(array[mid:], target)
+    elif array[mid] > target:
+        return binary_search(array[:mid], target)
+    else:
+        return True
+

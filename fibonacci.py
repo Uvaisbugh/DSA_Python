@@ -1,21 +1,6 @@
 def fibonacci(n):
-    """
-    Computes the nth Fibonacci number using recursion.
-
-    Args:
-    n (int): The position in the Fibonacci sequence to compute. Must be a non-negative integer.
-
-    Returns:
-    int: The nth Fibonacci number.
-
-    Note:
-    This function has an exponential time complexity of O(2^n) due to its recursive nature.
-    """
-
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+    if n < 1:
+        return n
     else:
         return fibonacci(n-1) + fibonacci(n-2)
 

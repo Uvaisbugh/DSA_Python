@@ -1,4 +1,3 @@
-#Palindrome Pairs
 from typing import List
 
 class Solution1:
